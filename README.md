@@ -23,7 +23,7 @@ The followings is the reason and has motivated me to make this library.
 
 #### PercentEncoding
 ```PercentEncoding``` has four values which are equivalent to Javscript functions(```encodeURI```, ```encodeURIComponent```, ```decodeURI```, ```decodeURIComponent```).
-```
+```swift
 let url = "http://tasanobu.jp?city=東京&year='20"
 
 /// EncodeURI
@@ -49,7 +49,7 @@ PercentEncoding.DecodeURIComponent.evaluate(string: encoded)
 #### String extension
 ```PercentEncoding``` offers String extension methods which are equivalent to Javscript functions(```encodeURI```, ```encodeURIComponent```, ```decodeURI```, ```decodeURIComponent```).
 
-```
+```swift
 /// encodeURI
 "http://tasanobu.jp?city=東京&year='20".ped_encodeURI()
 
@@ -73,7 +73,7 @@ encoded.ped_decodedURIComponent()
 ## Installation
 - Install with Cocoapods
 
-  ```
+  ```ruby
   platform :ios, '7.0'
   use_frameworks!
 
