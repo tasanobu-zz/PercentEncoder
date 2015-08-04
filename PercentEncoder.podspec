@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'http://twitter.com/tasanobu'
   s.authors = { 'Kazunobu Tasaka' => 'tasanobu@gmail.com' }
   s.source = { :git => 'https://github.com/tasanobu/PercentEncoder.git', :tag => s.version }
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '8.0'
   s.source_files = 'PercentEncoder/PercentEncoder/*.swift'
   s.requires_arc = true
 end
