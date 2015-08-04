@@ -9,19 +9,19 @@
 import Foundation
 
 public extension String {
-    func encodeURI() -> String {
+    func ped_encodeURI() -> String {
         return PercentEncoding.EncodeURI.evaluate(string: self)
     }
     
-    func encodeURIComponent() -> String {
+    func ped_encodeURIComponent() -> String {
         return PercentEncoding.EncodeURIComponent.evaluate(string: self)
     }
     
-    func decodeURI() -> String {
+    func ped_decodeURI() -> String {
         return PercentEncoding.DecodeURI.evaluate(string: self)
     }
     
-    func decodeURIComponent() -> String {
+    func ped_decodeURIComponent() -> String {
         return PercentEncoding.DecodeURIComponent.evaluate(string: self)
     }
 }
