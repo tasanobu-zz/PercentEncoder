@@ -11,6 +11,7 @@
 		F733EE801B708D8600746B5D /* PercentEncoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F733EE741B708D8600746B5D /* PercentEncoder.framework */; };
 		F733EE871B708D8600746B5D /* PercentEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733EE861B708D8600746B5D /* PercentEncodingTests.swift */; };
 		F733EE911B708E3C00746B5D /* PercentEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733EE901B708E3C00746B5D /* PercentEncoding.swift */; };
+		F733EE931B709A2C00746B5D /* String+PercentEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733EE921B709A2C00746B5D /* String+PercentEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		F733EE851B708D8600746B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F733EE861B708D8600746B5D /* PercentEncodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentEncodingTests.swift; sourceTree = "<group>"; };
 		F733EE901B708E3C00746B5D /* PercentEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentEncoding.swift; sourceTree = "<group>"; };
+		F733EE921B709A2C00746B5D /* String+PercentEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PercentEncoder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			children = (
 				F733EE791B708D8600746B5D /* PercentEncoder.h */,
 				F733EE901B708E3C00746B5D /* PercentEncoding.swift */,
+				F733EE921B709A2C00746B5D /* String+PercentEncoder.swift */,
 				F733EE771B708D8600746B5D /* Supporting Files */,
 			);
 			path = PercentEncoder;
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F733EE911B708E3C00746B5D /* PercentEncoding.swift in Sources */,
+				F733EE931B709A2C00746B5D /* String+PercentEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
