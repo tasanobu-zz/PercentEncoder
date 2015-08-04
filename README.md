@@ -67,14 +67,14 @@ encoded.ped_decodedURIComponent()
 ```
 
 ## Requirements
-- iOS 7.0+
+- iOS 7.0+ (iOS 8.0+ when installing with Cocoapods)
 - Xcode 6.4
 
 ## Installation
 - Install with Cocoapods
 
   ```ruby
-  platform :ios, '7.0'
+  platform :ios, '8.0'
   use_frameworks!
 
   pod 'PercentEncoder'
