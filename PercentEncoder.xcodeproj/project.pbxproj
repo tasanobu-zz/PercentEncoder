@@ -12,6 +12,7 @@
 		F733EE871B708D8600746B5D /* PercentEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733EE861B708D8600746B5D /* PercentEncodingTests.swift */; };
 		F733EE911B708E3C00746B5D /* PercentEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733EE901B708E3C00746B5D /* PercentEncoding.swift */; };
 		F733EE931B709A2C00746B5D /* String+PercentEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733EE921B709A2C00746B5D /* String+PercentEncoder.swift */; };
+		F78436FE1B720BF60083C3E4 /* String+PercentEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78436FD1B720BF60083C3E4 /* String+PercentEncoderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		F733EE861B708D8600746B5D /* PercentEncodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentEncodingTests.swift; sourceTree = "<group>"; };
 		F733EE901B708E3C00746B5D /* PercentEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentEncoding.swift; sourceTree = "<group>"; };
 		F733EE921B709A2C00746B5D /* String+PercentEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PercentEncoder.swift"; sourceTree = "<group>"; };
+		F78436FD1B720BF60083C3E4 /* String+PercentEncoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PercentEncoderTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				F733EE861B708D8600746B5D /* PercentEncodingTests.swift */,
+				F78436FD1B720BF60083C3E4 /* String+PercentEncoderTests.swift */,
 				F733EE841B708D8600746B5D /* Supporting Files */,
 			);
 			path = PercentEncoderTests;
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78436FE1B720BF60083C3E4 /* String+PercentEncoderTests.swift in Sources */,
 				F733EE871B708D8600746B5D /* PercentEncodingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +414,7 @@
 				F733EE8C1B708D8600746B5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F733EE8D1B708D8600746B5D /* Build configuration list for PBXNativeTarget "PercentEncoderTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +423,7 @@
 				F733EE8F1B708D8600746B5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
