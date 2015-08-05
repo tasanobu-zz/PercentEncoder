@@ -14,6 +14,7 @@
 		F733EE931B709A2C00746B5D /* String+PercentEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733EE921B709A2C00746B5D /* String+PercentEncoder.swift */; };
 		F78436FE1B720BF60083C3E4 /* String+PercentEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78436FD1B720BF60083C3E4 /* String+PercentEncoderTests.swift */; };
 		F78437001B7216F30083C3E4 /* NSString+PercentEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78436FF1B7216F30083C3E4 /* NSString+PercentEncoder.swift */; };
+		F78437021B7217500083C3E4 /* NSString+PercentEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78437011B7217500083C3E4 /* NSString+PercentEncoderTests.swift */; };
 		F78437041B7217B20083C3E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78437031B7217B20083C3E4 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		F733EE921B709A2C00746B5D /* String+PercentEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PercentEncoder.swift"; sourceTree = "<group>"; };
 		F78436FD1B720BF60083C3E4 /* String+PercentEncoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PercentEncoderTests.swift"; sourceTree = "<group>"; };
 		F78436FF1B7216F30083C3E4 /* NSString+PercentEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+PercentEncoder.swift"; sourceTree = "<group>"; };
+		F78437011B7217500083C3E4 /* NSString+PercentEncoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+PercentEncoderTests.swift"; sourceTree = "<group>"; };
 		F78437031B7217B20083C3E4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				F78437031B7217B20083C3E4 /* Constants.swift */,
 				F733EE861B708D8600746B5D /* PercentEncodingTests.swift */,
 				F78436FD1B720BF60083C3E4 /* String+PercentEncoderTests.swift */,
+				F78437011B7217500083C3E4 /* NSString+PercentEncoderTests.swift */,
 				F733EE841B708D8600746B5D /* Supporting Files */,
 			);
 			path = PercentEncoderTests;
@@ -236,6 +239,7 @@
 			files = (
 				F78436FE1B720BF60083C3E4 /* String+PercentEncoderTests.swift in Sources */,
 				F733EE871B708D8600746B5D /* PercentEncodingTests.swift in Sources */,
+				F78437021B7217500083C3E4 /* NSString+PercentEncoderTests.swift in Sources */,
 				F78437041B7217B20083C3E4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
