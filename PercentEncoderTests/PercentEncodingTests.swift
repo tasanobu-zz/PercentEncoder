@@ -11,9 +11,6 @@ import XCTest
 import PercentEncoder
 
 class PercentEncodingTests: XCTestCase {
-    let input = "http://tasanobu.jp?city=東京&year='20"
-    let inputEscapedByEncodeURI = "http://tasanobu.jp?city=%E6%9D%B1%E4%BA%AC&year='20"
-    let inputEscapedByEncodeURIComponent = "http%3A%2F%2Ftasanobu.jp%3Fcity%3D%E6%9D%B1%E4%BA%AC%26year%3D'20"
     
     override func setUp() {
         super.setUp()
@@ -25,7 +22,7 @@ class PercentEncodingTests: XCTestCase {
 
     // MARK: EncodeURI
     func testEncodeURI() {
-        let encoded = PercentEncoding.EncodeURI.evaluate(string: input)
+        let encoded = PercentEncoding.EncodeURI.evaluate(string: Constants.input)
         XCTAssertEqual(
             encoded,
             "http://tasanobu.jp?city=%E6%9D%B1%E4%BA%AC&year='20",
@@ -33,7 +30,7 @@ class PercentEncodingTests: XCTestCase {
     }
     
     func testEncodeURIComponent() {
-        let encoded = PercentEncoding.EncodeURIComponent.evaluate(string: input)
+        let encoded = PercentEncoding.EncodeURIComponent.evaluate(string: Constants.input)
         XCTAssertEqual(
             encoded,
             "http%3A%2F%2Ftasanobu.jp%3Fcity%3D%E6%9D%B1%E4%BA%AC%26year%3D'20",
@@ -41,13 +38,13 @@ class PercentEncodingTests: XCTestCase {
     }
     
     func testDecodeURI() {
-        let decoded = PercentEncoding.DecodeURI.evaluate(string: inputEscapedByEncodeURI)
-        XCTAssertEqual(decoded, input, "")
+        let decoded = PercentEncoding.DecodeURI.evaluate(string: Constants.inputEscapedByEncodeURI)
+        XCTAssertEqual(decoded, Constants.input, "")
     }
     
     func testDecodeURIComponent() {
-        let decoded = PercentEncoding.DecodeURIComponent.evaluate(string: inputEscapedByEncodeURIComponent)
-        XCTAssertEqual(decoded, input, "")
+        let decoded = PercentEncoding.DecodeURIComponent.evaluate(string: Constants.inputEscapedByEncodeURIComponent)
+        XCTAssertEqual(decoded, Constants.input, "")
     }
     
     func testPerformanceExample() {
