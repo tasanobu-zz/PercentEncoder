@@ -13,6 +13,7 @@
 		F733EE911B708E3C00746B5D /* PercentEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733EE901B708E3C00746B5D /* PercentEncoding.swift */; };
 		F733EE931B709A2C00746B5D /* String+PercentEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733EE921B709A2C00746B5D /* String+PercentEncoder.swift */; };
 		F78436FE1B720BF60083C3E4 /* String+PercentEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78436FD1B720BF60083C3E4 /* String+PercentEncoderTests.swift */; };
+		F78437001B7216F30083C3E4 /* NSString+PercentEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78436FF1B7216F30083C3E4 /* NSString+PercentEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		F733EE901B708E3C00746B5D /* PercentEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentEncoding.swift; sourceTree = "<group>"; };
 		F733EE921B709A2C00746B5D /* String+PercentEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PercentEncoder.swift"; sourceTree = "<group>"; };
 		F78436FD1B720BF60083C3E4 /* String+PercentEncoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PercentEncoderTests.swift"; sourceTree = "<group>"; };
+		F78436FF1B7216F30083C3E4 /* NSString+PercentEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+PercentEncoder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				F733EE791B708D8600746B5D /* PercentEncoder.h */,
 				F733EE901B708E3C00746B5D /* PercentEncoding.swift */,
 				F733EE921B709A2C00746B5D /* String+PercentEncoder.swift */,
+				F78436FF1B7216F30083C3E4 /* NSString+PercentEncoder.swift */,
 				F733EE771B708D8600746B5D /* Supporting Files */,
 			);
 			path = PercentEncoder;
@@ -220,6 +223,7 @@
 			files = (
 				F733EE911B708E3C00746B5D /* PercentEncoding.swift in Sources */,
 				F733EE931B709A2C00746B5D /* String+PercentEncoder.swift in Sources */,
+				F78437001B7216F30083C3E4 /* NSString+PercentEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
