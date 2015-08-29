@@ -22,7 +22,7 @@ public enum PercentEncoding {
         }
     }
     
-    public func evaluate(#string: String) -> String {
+    public func evaluate(string string: String) -> String {
         // escape single quote becasue it is used in script string
         let escaped = string.stringByReplacingOccurrencesOfString("'", withString: "\\'")
         let script = "var value = \(functionName)('\(escaped)');"
