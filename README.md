@@ -67,8 +67,8 @@ encoded.ped_decodedURIComponent()
 ```
 
 ## Requirements
-- iOS 7.0+ (iOS 8.0+ when installing with Cocoapods)
-- Xcode 6.4
+- iOS 8.0+
+- Xcode 7.0
 
 ## Installation
 - Install with Cocoapods
@@ -84,7 +84,7 @@ encoded.ped_decodedURIComponent()
 
 
 ## Release Notes
-See <a href="https://github.com/tasanobu/PercentEncoder/blob/master/CHANGES.md">CHANGES.md</a>
+See https://github.com/tasanobu/PercentEncoder/releases
 
 ## License
 ```PercentEncoder``` is released under the MIT license. See LICENSE for details.
