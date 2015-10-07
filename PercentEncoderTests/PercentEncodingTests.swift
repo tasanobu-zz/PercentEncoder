@@ -47,6 +47,13 @@ class PercentEncodingTests: XCTestCase {
         XCTAssertEqual(decoded, Constants.input, "")
     }
     
+    func testInvalidJSString() {
+        XCTAssertEqual(PercentEncoding.EncodeURI.evaluate(string: Constants.invalidJSString), Constants.encodedInvalidJSString)
+        XCTAssertEqual(PercentEncoding.EncodeURIComponent.evaluate(string: Constants.invalidJSString), Constants.encodedInvalidJSString)
+        XCTAssertEqual(PercentEncoding.DecodeURI.evaluate(string: Constants.encodedInvalidJSString), Constants.invalidJSString)
+        XCTAssertEqual(PercentEncoding.DecodeURIComponent.evaluate(string: Constants.encodedInvalidJSString), Constants.invalidJSString)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock() {
