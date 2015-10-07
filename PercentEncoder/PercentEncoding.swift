@@ -23,8 +23,19 @@ public enum PercentEncoding {
     }
     
     public func evaluate(string string: String) -> String {
-        // escape single quote becasue it is used in script string
-        let escaped = string.stringByReplacingOccurrencesOfString("'", withString: "\\'")
+        // escape back slash, single quote and line terminators because it is not included in ECMAScript SingleStringCharacter
+        var escaped = string
+        let mapping = [
+            "\\": "\\\\",
+            "'":  "\\'",
+            "\n": "\\n",
+            "\r": "\\r",
+            "\u{2028}": "\\u2028",
+            "\u{2029}": "\\u2029"]
+        for (src, dst) in mapping {
+            escaped = escaped.stringByReplacingOccurrencesOfString(src, withString: dst)
+        }
+        
         let script = "var value = \(functionName)('\(escaped)');"
         let context = JSContext()
         context.evaluateScript(script)
