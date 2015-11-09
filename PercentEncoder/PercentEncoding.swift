@@ -24,14 +24,18 @@ public enum PercentEncoding {
     
     public func evaluate(string string: String) -> String {
         // escape back slash, single quote and line terminators because it is not included in ECMAScript SingleStringCharacter
-        var escaped = string
+        // * Must use an array to ensure the order to escape the characters.
         let mapping = [
-            "\\": "\\\\",
-            "'":  "\\'",
-            "\n": "\\n",
-            "\r": "\\r",
-            "\u{2028}": "\\u2028",
-            "\u{2029}": "\\u2029"]
+            ("\\", "\\\\"),
+            ("'", "\\'"),
+            ("\n", "\\n"),
+            ("\r", "\\r"),
+            ("\u{2028}", "\\u2028"),
+            ("\u{2029}", "\\u2029")
+        ]
+        
+        var escaped = string
+        
         for (src, dst) in mapping {
             escaped = escaped.stringByReplacingOccurrencesOfString(src, withString: dst)
         }
