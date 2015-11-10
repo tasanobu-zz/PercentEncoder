@@ -48,10 +48,21 @@ class PercentEncodingTests: XCTestCase {
     }
     
     func testInvalidJSString() {
-        XCTAssertEqual(PercentEncoding.EncodeURI.evaluate(string: Constants.invalidJSString), Constants.encodedInvalidJSString)
-        XCTAssertEqual(PercentEncoding.EncodeURIComponent.evaluate(string: Constants.invalidJSString), Constants.encodedInvalidJSString)
-        XCTAssertEqual(PercentEncoding.DecodeURI.evaluate(string: Constants.encodedInvalidJSString), Constants.invalidJSString)
-        XCTAssertEqual(PercentEncoding.DecodeURIComponent.evaluate(string: Constants.encodedInvalidJSString), Constants.invalidJSString)
+        let plain = Constants.invalidJSString
+        let encoded = Constants.encodedInvalidJSString
+        XCTAssertEqual(PercentEncoding.EncodeURI.evaluate(string: plain), encoded)
+        XCTAssertEqual(PercentEncoding.EncodeURIComponent.evaluate(string: plain), encoded)
+        XCTAssertEqual(PercentEncoding.DecodeURI.evaluate(string: encoded), plain)
+        XCTAssertEqual(PercentEncoding.DecodeURIComponent.evaluate(string: encoded), plain)
+    }
+    
+    func testComposedCharacters() {
+        let plain = Constants.composedCharacters
+        let encoded = Constants.encodedComposedCharacters
+        XCTAssertEqual(PercentEncoding.EncodeURI.evaluate(string: plain), encoded)
+        XCTAssertEqual(PercentEncoding.EncodeURIComponent.evaluate(string: plain), encoded)
+        XCTAssertEqual(PercentEncoding.DecodeURI.evaluate(string: encoded), plain)
+        XCTAssertEqual(PercentEncoding.DecodeURIComponent.evaluate(string: encoded), plain)
     }
     
     func testPerformanceExample() {

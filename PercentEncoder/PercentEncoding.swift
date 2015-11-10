@@ -37,7 +37,7 @@ public enum PercentEncoding {
         var escaped = string
         
         for (src, dst) in mapping {
-            escaped = escaped.stringByReplacingOccurrencesOfString(src, withString: dst)
+            escaped = escaped.stringByReplacingOccurrencesOfString(src, withString: dst, options: .LiteralSearch)
         }
         
         let script = "var value = \(functionName)('\(escaped)');"
