@@ -10,19 +10,19 @@ import Foundation
 import JavaScriptCore
 
 public enum PercentEncoding {
-    case EncodeURI, EncodeURIComponent, DecodeURI, DecodeURIComponent
+    case encodeURI, encodeURIComponent, decodeURI, decodeURIComponent
     
     /// return equivalent javascript function name
     private var functionName: String {
         switch self {
-        case .EncodeURI:            return "encodeURI"
-        case .EncodeURIComponent:   return "encodeURIComponent"
-        case .DecodeURI:            return "decodeURI"
-        case .DecodeURIComponent:   return "decodeURIComponent"
+        case .encodeURI:            return "encodeURI"
+        case .encodeURIComponent:   return "encodeURIComponent"
+        case .decodeURI:            return "decodeURI"
+        case .decodeURIComponent:   return "decodeURIComponent"
         }
     }
     
-    public func evaluate(string string: String) -> String {
+    public func evaluate(string: String) -> String {
         // escape back slash, single quote and line terminators because it is not included in ECMAScript SingleStringCharacter
         // * Must use an array to ensure the order to escape the characters.
         let mapping = [
@@ -37,11 +37,11 @@ public enum PercentEncoding {
         var escaped = string
         
         for (src, dst) in mapping {
-            escaped = escaped.stringByReplacingOccurrencesOfString(src, withString: dst, options: .LiteralSearch)
+            escaped = escaped.replacingOccurrences(of: src, with: dst, options: .literal)
         }
         
         let script = "var value = \(functionName)('\(escaped)');"
-        let context = JSContext()
+        let context: JSContext! = JSContext()
         context.evaluateScript(script)
         let value: JSValue = context.objectForKeyedSubscript("value")
         return value.toString()
