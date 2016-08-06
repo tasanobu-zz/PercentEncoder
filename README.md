@@ -8,6 +8,7 @@ PercentEncoder
 )](http://mit-license.org)
 [![Issues](https://img.shields.io/github/issues/tasanobu/PercentEncoder.svg?style=flat
 )](https://github.com/tasanobu/PercentEncoder/issues?state=open)
+[![Platform](https://img.shields.io/cocoapods/p/PercentEncoder.svg?style=flat)](http://cocoadocs.org/docsets/PercentEncoder)
 
 ```PercentEncoder``` is a lightweight library to escape string using so called [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding) in Swift.
 
