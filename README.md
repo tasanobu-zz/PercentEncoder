@@ -6,6 +6,7 @@ PercentEncoder
 [![CocoaPods](https://img.shields.io/cocoapods/v/PercentEncoder.svg)]()
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Issues](https://img.shields.io/github/issues/tasanobu/PercentEncoder.svg?style=flat
 )](https://github.com/tasanobu/PercentEncoder/issues?state=open)
 [![Platform](https://img.shields.io/cocoapods/p/PercentEncoder.svg?style=flat)](http://cocoadocs.org/docsets/PercentEncoder)
@@ -68,8 +69,10 @@ encoded.ped_decodedURIComponent()
 ```
 
 ## Requirements
+- Swift 3.0
+- Xcode 8.0
 - iOS 8.0+
-- Xcode 7.0
+
 
 ## Installation
 - Install with Cocoapods
