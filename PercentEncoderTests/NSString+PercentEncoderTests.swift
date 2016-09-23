@@ -36,12 +36,12 @@ class NSString_PercentEncoderTests: XCTestCase {
     
     func testDecodeURI() {
         let decoded = NSString(string: Constants.inputEscapedByEncodeURI).ped_decodeURI()
-        XCTAssertEqual(decoded, Constants.input, "")
+        XCTAssertEqual(decoded as String, Constants.input, "")
     }
     
     func testDecodedURIComponent() {
         let decoded = NSString(string: Constants.inputEscapedByEncodeURIComponent).ped_decodeURIComponent()
-        XCTAssertEqual(decoded, Constants.input, "")
+        XCTAssertEqual(decoded as String, Constants.input, "")
     }
     
     func testPerformanceExample() {
@@ -50,5 +50,4 @@ class NSString_PercentEncoderTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }
