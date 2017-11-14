@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'PercentEncoder'
-  s.version = '1.2.0'
+  s.version = '1.2.1'
   s.license = 'MIT'
   s.summary = 'PercentEncoder is a lightweight library to escape string using so called URL encoding in Swift'
   s.homepage = 'https://github.com/tasanobu/PercentEncoder'
