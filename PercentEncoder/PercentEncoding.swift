@@ -9,18 +9,8 @@
 import Foundation
 import JavaScriptCore
 
-public enum PercentEncoding {
+public enum PercentEncoding: String {
     case encodeURI, encodeURIComponent, decodeURI, decodeURIComponent
-    
-    /// return equivalent javascript function name
-    private var functionName: String {
-        switch self {
-        case .encodeURI:            return "encodeURI"
-        case .encodeURIComponent:   return "encodeURIComponent"
-        case .decodeURI:            return "decodeURI"
-        case .decodeURIComponent:   return "decodeURIComponent"
-        }
-    }
     
     public func evaluate(string: String) -> String {
         // escape back slash, single quote and line terminators because it is not included in ECMAScript SingleStringCharacter
@@ -40,7 +30,7 @@ public enum PercentEncoding {
             escaped = escaped.replacingOccurrences(of: src, with: dst, options: .literal)
         }
         
-        let script = "var value = \(functionName)('\(escaped)');"
+        let script = "var value = \(rawValue)('\(escaped)');"
         let context: JSContext! = JSContext()
         context.evaluateScript(script)
         let value: JSValue = context.objectForKeyedSubscript("value")
