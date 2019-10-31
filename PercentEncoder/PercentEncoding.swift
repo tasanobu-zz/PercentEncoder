@@ -13,27 +13,13 @@ public enum PercentEncoding: String {
     case encodeURI, encodeURIComponent, decodeURI, decodeURIComponent
     
     public func evaluate(string: String) -> String {
-        // escape back slash, single quote and line terminators because it is not included in ECMAScript SingleStringCharacter
-        // * Must use an array to ensure the order to escape the characters.
-        let mapping = [
-            ("\\", "\\\\"),
-            ("'", "\\'"),
-            ("\n", "\\n"),
-            ("\r", "\\r"),
-            ("\u{2028}", "\\u2028"),
-            ("\u{2029}", "\\u2029")
-        ]
-        
-        var escaped = string
-        
-        for (src, dst) in mapping {
-            escaped = escaped.replacingOccurrences(of: src, with: dst, options: .literal)
+        guard let context = JSContext() else {
+            return ""
         }
-        
-        let script = "var value = \(rawValue)('\(escaped)');"
-        let context: JSContext! = JSContext()
-        context.evaluateScript(script)
-        let value: JSValue = context.objectForKeyedSubscript("value")
-        return value.toString()
+        let inputValue = JSValue(object: string, in: context)
+        context.setObject(inputValue, forKeyedSubscript: "input" as NSString)
+        context.evaluateScript("var output = \(rawValue)(input);")
+        let outputValue: JSValue = context.objectForKeyedSubscript("output")
+        return outputValue.toString()
     }
 }
